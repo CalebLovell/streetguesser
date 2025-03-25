@@ -55,49 +55,46 @@ function MapPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-amber-50
-    ">
-      <div className="p-6 max-w-7xl mx-auto">
-        <div className="flex flex-col gap-6">
-          {/* Header section */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-800">Street Map Explorer</h2>
-              <p className="text-gray-600 mt-1">Interactive map showing streets and geography around New York City</p>
+    <div className="max-w-full p-6">
+      <div className="flex flex-col gap-6">
+        {/* Header section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h2 className="text-3xl font-bold text-orange-700">Street Map Explorer</h2>
+            <p className="text-orange-600 mt-1">Interactive map showing streets and geography around New York City</p>
+          </div>
+          <div className="bg-orange-50 rounded-lg border border-orange-200 p-3 flex items-center gap-4 text-sm">
+            <div className="flex flex-col">
+              <span className="text-orange-500">Longitude</span>
+              <span className="font-medium text-orange-700">{lng}</span>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-3 flex items-center gap-4 text-sm">
-              <div className="flex flex-col">
-                <span className="text-gray-500">Longitude</span>
-                <span className="font-medium text-indigo-600">{lng}</span>
-              </div>
-              <div className="h-8 w-px bg-gray-200"></div>
-              <div className="flex flex-col">
-                <span className="text-gray-500">Latitude</span>
-                <span className="font-medium text-indigo-600">{lat}</span>
-              </div>
-              <div className="h-8 w-px bg-gray-200"></div>
-              <div className="flex flex-col">
-                <span className="text-gray-500">Zoom</span>
-                <span className="font-medium text-indigo-600">{zoom}</span>
-              </div>
+            <div className="h-8 w-px bg-orange-200"></div>
+            <div className="flex flex-col">
+              <span className="text-orange-500">Latitude</span>
+              <span className="font-medium text-orange-700">{lat}</span>
+            </div>
+            <div className="h-8 w-px bg-orange-200"></div>
+            <div className="flex flex-col">
+              <span className="text-orange-500">Zoom</span>
+              <span className="font-medium text-orange-700">{zoom}</span>
             </div>
           </div>
-          
-          {/* Map container */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div 
-              ref={mapContainer} 
-              className="w-full h-[600px]"
-            />
-          </div>
-          
-          {/* Information card */}
-          <div className="bg-white p-5 rounded-xl shadow-md">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">About This Map</h3>
-            <p className="text-gray-600">
-              This interactive map displays the streets and geography around New York City. You can pan, zoom, and explore the area.
-            </p>
-          </div>
+        </div>
+        
+        {/* Map container */}
+        <div className="bg-orange-50 rounded-xl border border-orange-200 overflow-hidden">
+          <div 
+            ref={mapContainer} 
+            className="w-full h-[600px]"
+          />
+        </div>
+        
+        {/* Information card */}
+        <div className="bg-orange-50 p-5 rounded-xl border border-orange-200">
+          <h3 className="text-lg font-semibold text-orange-700 mb-2">About This Map</h3>
+          <p className="text-orange-600">
+            This interactive map displays the streets and geography around New York City. You can pan, zoom, and explore the area.
+          </p>
         </div>
       </div>
     </div>
