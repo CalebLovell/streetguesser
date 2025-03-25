@@ -120,6 +120,14 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             Deferred
           </Link>{' '}
           <Link
+            to="/map"
+            activeProps={{
+              className: 'font-bold',
+            }}
+          >
+            Map
+          </Link>{' '}
+          <Link
             // @ts-expect-error
             to="/this-route-does-not-exist"
             activeProps={{
